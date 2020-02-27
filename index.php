@@ -23,30 +23,7 @@
   <div class="main-wrapper">
     <main class="main">
       <section class="main__tracks">
-      <?php
-        foreach($db as $track) {
-      ?>
-        <div class="main__tracks__track">
-          <div class="main__tracks__track__poster">
-            <img src="<?php echo $track['poster'] ?>" alt="Album poster" title="<?php echo $track['title'] ?>">
-          </div>
-          <h2 class="main__tracks__track__title">
-          <?php
-            echo $track['title'];
-          ?>
-          </h2>
-          <h3 class="main__tracks__track__author">
-          <?php
-            echo $track['author'];
-          ?>
-          </h3>
-          <h3 class="main__tracks__track__year">
-          <?php
-            echo $track['year'];
-          ?>
-          </h3>
-        </div>
-      <?php } ?>
+      
       </section>
     </main>
   </div>

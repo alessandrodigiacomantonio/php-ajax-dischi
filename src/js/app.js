@@ -3,8 +3,7 @@ $(document).ready(function(){
   $ajax(
     {
       url: "http://localhost/dist/php/server.php",
-      method: GET,
-      // dataType: "jsonp",
+      method: "GET",
       success: function(response) {
         console.log(response);
       },

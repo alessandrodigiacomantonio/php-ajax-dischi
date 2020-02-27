@@ -1,5 +1,4 @@
 <?php
-  include __DIR__ . "/database.php";
+  include __DIR__ . "database.php";
   header('Content-Type: application/json');
-  $_GET[json_encode($db)];
-?>
+  echo json_encode($db);
