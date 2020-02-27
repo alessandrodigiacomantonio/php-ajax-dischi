@@ -1,0 +1,49 @@
+@import "partials/_variables.scss";
+@import "partials/_mixins.scss";
+@import "partials/_common.scss";
+
+.header-wrapper {
+  background-color: #000;
+}
+.header {
+  max-width: $page-max-width;
+  margin: 0 auto;
+  &__logo {
+    width: 34px;
+  }
+}
+
+.main {
+  max-width: $page-max-width;
+  margin: 0 auto;
+  &__tracks {
+    display: flex;
+    flex-wrap: wrap;
+    &__track {
+      width: 300px;
+      min-height: 400px;
+      margin: 20px 0;
+      padding: 20px;
+      background-color: #000;
+      text-align: center;
+      font-family: $track-font-family;
+      color: $track-font-color;
+      &__poster {
+        width: 100%;
+        & img {
+        width: 100%;
+        }
+      }
+      &__author {
+        margin-top: 10px;
+        color: #6d6d6d;
+      }
+    }
+    &__track:nth-child(3n+2) {
+      margin: 20px auto;
+    }
+    &__track > * {
+      margin-top: 10px;
+    }
+  }
+}

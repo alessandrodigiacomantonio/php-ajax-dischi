@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  background-color: #181818;
+}
+
+.header-wrapper {
+  background-color: #000;
+}
+
+.header {
+  max-width: 975px;
+  margin: 0 auto;
+}
+
+.header__logo {
+  width: 34px;
+}
+
+.main {
+  max-width: 975px;
+  margin: 0 auto;
+}
+
+.main__tracks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main__tracks__track {
+  width: 300px;
+  min-height: 400px;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #000;
+  text-align: center;
+  font-family: "Roboto";
+  color: #fff;
+}
+
+.main__tracks__track__poster {
+  width: 100%;
+}
+
+.main__tracks__track__poster img {
+  width: 100%;
+}
+
+.main__tracks__track__author {
+  margin-top: 10px;
+  color: #6d6d6d;
+}
+
+.main__tracks__track:nth-child(3n+2) {
+  margin: 20px auto;
+}
+
+.main__tracks__track > * {
+  margin-top: 10px;
+}
+
