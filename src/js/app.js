@@ -1,14 +1,18 @@
 $(document).ready(function(){
 
-  $ajax(
+  $.ajax(
     {
-      url: "http://localhost/dist/php/server.php",
+      url: "http://localhost/mamp_public/php-ajax-dischi/dist/php/server.php",
       method: "GET",
       success: function(response) {
-        console.log(response);
+        var source = $("#track-template").html();
+        var trackTemplate = Handlebars.compile(source);
+        for (var trackNumber = 0; trackNumber < response.length; trackNumber++ ) {
+          $('.main__tracks').append( trackTemplate(response[trackNumber]) );
+        }
       },
       error: function(result, stats, errors) {
-        alert("errore "+errors);
+        alert("errore");
       },
     }
   );

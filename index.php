@@ -10,6 +10,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
   <!-- font-family: Roboto -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+  <script src="dist/js/app.js" charset="utf-8"></script>
+
+  </script>
   <!-- foglio di stile principale -->
   <link rel="stylesheet" href="dist/css/app.css">
   <title>Php Ajax Dischi</title>
@@ -23,7 +26,7 @@
   <div class="main-wrapper">
     <main class="main">
       <section class="main__tracks">
-      
+
       </section>
     </main>
   </div>

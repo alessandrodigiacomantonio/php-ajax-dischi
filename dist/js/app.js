@@ -94,15 +94,19 @@
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
-  $ajax({
-    url: "http://localhost/dist/php/server.php",
-    method: GET,
-    // dataType: "jsonp",
+  $.ajax({
+    url: "http://localhost/mamp_public/php-ajax-dischi/dist/php/server.php",
+    method: "GET",
     success: function success(response) {
-      console.log(response);
+      var source = $("#track-template").html();
+      var trackTemplate = Handlebars.compile(source);
+
+      for (var trackNumber = 0; trackNumber < response.length; trackNumber++) {
+        $('.main__tracks').append(trackTemplate(response[trackNumber]));
+      }
     },
     error: function error(result, stats, errors) {
-      alert("errore " + errors);
+      alert("errore");
     }
   });
 });
@@ -127,8 +131,8 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Jacopo\desktop\php-ajax-dischi\src\js\app.js */"./src/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Jacopo\desktop\php-ajax-dischi\src\scss\app.scss */"./src/scss/app.scss");
+__webpack_require__(/*! F:\alessandro\boolean.careers\esercitazioni\mamp_public\php-ajax-dischi\src\js\app.js */"./src/js/app.js");
+module.exports = __webpack_require__(/*! F:\alessandro\boolean.careers\esercitazioni\mamp_public\php-ajax-dischi\src\scss\app.scss */"./src/scss/app.scss");
 
 
 /***/ })
